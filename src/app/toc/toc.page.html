@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>toc</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let chapter of appPages" >
+    <ion-item [routerDirection]="'root'" [routerLink]="[chapter.url]">
+      <ion-icon [name]="chapter.icon" slot="start" ></ion-icon>
+      {{chapter.title}}  |  {{chapter.note}}
+    </ion-item>
+  </ion-list>
+</ion-content>
